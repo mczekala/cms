@@ -9,3 +9,8 @@ Route::get('/admin', function () {
 Route::get('/createPage', function () {
     return view('createPage');
 });
+Route::get('/{page}', function () {
+    use Storage;
+    Storage::put('file.txt', 'Your name');
+    return view(page);
+});
