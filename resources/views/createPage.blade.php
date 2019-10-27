@@ -8,7 +8,7 @@
             <option value="photo">photo</option>
         </select>
         <input class="section-maker__name" placeholder="section name"/>
-        <input class="section-maker__content" placeholder="section content"/>
+        <textarea class="section-maker__content">section content</textarea>
         <button>add section</button>
     </section>
 @endsection
