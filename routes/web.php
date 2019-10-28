@@ -1,16 +1,12 @@
 <?php
+Route::get('/','PagesController@index');
+// Route::get('/{name}','PagesController@page');
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/admin', function () {
-    return view('signIn');
-});
-Route::get('/createPage', function () {
-    return view('createPage');
-});
-Route::get('/{page}', function () {
-    use Storage;
-    Storage::put('file.txt', 'Your name');
-    return view(page);
-});
+Route::get('/admin/pages/create','PagesController@create');
+Route::post('/admin/pagesaction','PagesController@storePage');
+
+Route::get('/admin','PagesController@index');
+Route::get('/admin/{name}','PagesController@page');
+Route::get('/admin/{name}/sections','SectionsController@index');
+Route::get('/admin/{name}/sections/create','SectionsController@create');
+Route::post('/admin/{name}/sectionsaction','SectionsController@storeSection');

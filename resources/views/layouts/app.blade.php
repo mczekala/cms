@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>@yield('title')</title>
@@ -11,9 +12,10 @@
     </head>
     <body>
         <div class="links">
-            <a href="/createPage">Docs</a>
-            <a href="/admin">Laracasts</a>
             <a href="/">Home</a>
+            <a href="/createPage">Create Page</a>
+            <a href="/editPage">Edit Page</a>
+            <a href="/admin">Admin</a>
         </div>
         <div class="container">
             @yield('content')
